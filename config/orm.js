@@ -12,7 +12,7 @@ function printQuestionMarks(num) {
 }
 
 //function to convert obj key/value pairs into sql syntax
-function objTosql(ob) {
+function objToSql(ob) {
     var arr = [];
 
     //loop through keys & push key/value pair as string int arr
@@ -67,7 +67,7 @@ var orm = {
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
-        queryString += objTosql(objColVals);
+        queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
 

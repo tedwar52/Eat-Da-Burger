@@ -2,15 +2,16 @@
 <!-- Pass in data from server.js -->
 <ul>
     {{#each burgers}}
+    {{#unless devoured}}
     <li>
-        <p><span class="label">ID:</span> {{this.id}}</p>
+        <!--<p><span class="label">ID:</span> {{this.id}}</p>-->
         <p><span class="label">Burger:</span> {{this.burger_name}}</p>
 
 
         <button data-id="{{this.id}}" class="deleteburger">Devour!</button>
 
-        <a href="/{{this.id}}">Update this quote</a>
     </li>
+    {{/unless}}
     {{/each}}
 </ul>
 

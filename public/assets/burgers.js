@@ -1,8 +1,23 @@
 $(function() {
     $(".deleteburger").on("click", function(event) {
         var id = $(this).data("id");
+        var eat = $(this).data("NewEat");
 
         //DELETE
+        var eat = {
+            devoured: eat
+        };
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: eat
+        }).then(
+            function() {
+                console.log("changed to", eat);
+                location.reload();
+            }
+        );
+
+        /*
         $.ajax("/api/burgers/" + id, {
             type: "DELETE"
         }).then(
@@ -12,6 +27,7 @@ $(function() {
                 location.reload();
             }
         );
+        */
     });
 
     $(".create-form").on("submit", function(event) {
@@ -19,6 +35,7 @@ $(function() {
 
         var newBurger = {
             burger_name: $("#burger").val().trim(),
+            devoured: 0
         };
 
         //POST
@@ -33,3 +50,15 @@ $(function() {
         );
     });
 })
+
+//===============PSEUDO CODE==========================
+/*
+For some reason, my functions aren't working...
+
+On this page...
+
+When a user hits the "devour" button, the selected burger should dissappear from the list.
+
+When a user hits the "Submit" button, the added burger should display on the list.
+
+*/
