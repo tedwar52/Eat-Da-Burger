@@ -19,6 +19,9 @@ In order to run this application, you will need to install Express by entering:"
 
 Before using this app, be sure to create the burgers_db in MySQL. This can be done in the terminal. Make sure you are in the "db" folder. Start the MySQL command line tool by running "mysql -u root -p". After logging in, you will be in the mysql command line. Enter "source schema.sql" to create the database. Run "source seeds.sql" to fill that database with the seeds.
 
+It's not styled, but here is the gist
+![Image of Homepage]("/public/assets/eat.png);
+
 <a name="Usage">**_Usage_**</a>
 
 In the node command line, enter "node server" to get the server up and running! On the webpage, utilize the "submit" and "devour" buttons.
