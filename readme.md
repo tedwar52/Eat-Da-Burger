@@ -8,9 +8,6 @@ An MVC web application. Utilizes Express, Handlebars, and MySQL. A user can add 
 
 - [Installation](#Installation)
 - [Usage](#Usage)
-- [Contributors](#Guidelines)
-- [Testing](#Testing)
-- [License](#License)
 - [More](#More)
 
 <a name="Installation">**_Installation_**</a>
@@ -20,7 +17,7 @@ In order to run this application, you will need to install Express by entering:"
 Before using this app, be sure to create the burgers_db in MySQL. This can be done in the terminal. Make sure you are in the "db" folder. Start the MySQL command line tool by running "mysql -u root -p". After logging in, you will be in the mysql command line. Enter "source schema.sql" to create the database. Run "source seeds.sql" to fill that database with the seeds.
 
 It's not styled, but here is the gist
-![Image of Homepage]("/public/assets/eat.png);
+![Image of Homepage]("/public/assets/eat.png");
 
 <a name="Usage">**_Usage_**</a>
 
